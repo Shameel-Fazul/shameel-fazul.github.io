@@ -1,7 +1,132 @@
-<!DOCTYPE html>
+
+<!DOCTYPE HTML>
 <html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
+	<head>
+		<title>Hi, I'm Shameel.</title>
+		<style type="text/css">
+			@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				background: #121212;
+				color: #FFF;
+				text-align: center;
+				font-family: 'Roboto Mono', monospace;
+				font-size: 18px;
+				min-width: 980px;
+			}
+			a {
+				cursor: pointer;
+				color: #a29bfe;
+				text-decoration: none;
+			}
+			a:hover {
+				color: #6c5ce7;
+			}
+			/* Character art header */
+			#character {
+				background: url('character.png');
+				width: 400px;
+				height: 400px;
+				margin: 0 auto;
+			}
+			#header {
+				padding-top: 50px;
+				background: #EBEBEB;
+			}
+			/* Social bar w/ links */
+			#social-bar {
+				background: #121212;
+				width: 100%;
+				font-family: 'Press Start 2P', cursive;
+				text-transform: uppercase;
+				font-size: 16px;
+			}
+			#social-bar a {
+				padding: 15px 10px;
+				display: inline-block;
+				border-radius: 2px;
+			}
+			#social-bar a:hover {
+				color: #000;
+			}
+			.divider {
+				color: #6E6E6E;
+				margin: 0 5px;
+			}
+			.divider:after {
+				content: '/';
+			}
+			/* Icon Hacks */
+			.fa {
+				font-size: 28px !important;
+				margin-right: -8px;
+			}
+			/* Floating Tooltip */
+			#friendly-icons-target {
+				display: none;
+				margin-top: 10px;
+				position: fixed;
+			}
+			/* Color codes from https://www.c64-wiki.com/wiki/Color */
+			.c64-lightred-hover:hover {
+				background: #FF7777;
+			}
+			.c64-lightgreen-hover:hover {
+				background: #AAFF66;
+			}
+			.c64-cyan-hover:hover {
+				background: #AAFFEE;
+			}
+			.c64-yellow-hover:hover {
+				background: #EEEE77;
+			}
+			/* Container */
+			#container {
+				margin: 50px 0;
+			}
+		</style>
+		<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div id="header">
+			<div id="character"></div>
+		</div>
+		<div id="container">
+			<h1>Hi, I'm Shameel Fazul.</h1>
+			<p>Computer Science Student At <a href="https://www.cardiffmet.ac.uk" target="_blank">Cardiff Metropolitan University</a>.</p>
+			<p>Have a strong interest in API, networking, and web development.</p>
+			<br />
+			<div id="social-bar">
+				Contact Me:
+				<a class="c64-lightred-hover" href="https://mail.google.com/mail/u/0/#compose" friendly-icons-text="shameel.fazul@mail.com"><i class="fa fa-envelope-square"></i> <span reset-text="Email">Email</span></a><a class="c64-lightgreen-hover" href="https://github.com/Shameel-Fazul" friendly-icons-text="github.com/Shameel-Fazul" target="_blank"><i class="fa fa-github-square"></i> <span reset-text="Github">Github</span></a><span class="divider"></span><a class="c64-cyan-hover" href="https://linkedin.comr" friendly-icons-text="Shameel Fazul" target="_blank"><i class="fa fa-linkedin-square"></i> <span reset-text="LinkedIn">LinkedIn</span></a>	
+			</div>
+		</div>
+		<div id="friendly-icons-target"></div>
+		<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script>
+		<script type="text/javascript">
+			var elements = document.getElementsByTagName('*');
+			var container = document.getElementById('friendly-icons-target');
+			for (var i = 0; i < elements.length; i++) {
+				var element = elements[i];
+				if (element.getAttribute('friendly-icons-text')) {
+					(function(element) {
+						element.onmouseover = function() {
+							var offset = element.getBoundingClientRect();
+							container.innerHTML = element.getAttribute('friendly-icons-text');
+							container.style.display = 'inline-block';
+							container.style.left = offset.left + offset.width / 2 - (container.getBoundingClientRect().width / 2) + 'px';
+							container.style.top = offset.bottom + 'px';
+						};
+						element.onmouseout = function() {
+							container.style.display = 'none';
+						};
+					}(element));
+				}
+			}
+		</script>
+	</body>
 </html>
