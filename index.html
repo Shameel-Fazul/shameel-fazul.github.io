@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-	    <link rel="icon" type="image/gif/png" href="character.png">
+	    <link rel="icon" type="image/gif/png" href="shameel.png">
 		<title>Shameel Fazul</title>
 		<style type="text/css">
 			@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
@@ -29,14 +29,15 @@
 			}
 			/* Character art header */
 			#character {
-				background: url('character.png');
+				background: url('shameel.png'); 
 				width: 400px;
 				height: 400px;
 				margin: 0 auto;
 			}
+			
 			#header {
 				padding-top: 50px;
-				background: #EBEBEB;
+				background: #000000;
 			}
 			/* Social bar w/ links */
 			#social-bar {
@@ -88,13 +89,22 @@
 			/* Container */
 			#container {
 				margin: 50px 0;
+			}
+			.Copyright {
+	color: #999;
+}
+        .Copyright {
+	font-weight: normal;
+}
+        .Copyright small {
+	font-family: Arial, Helvetica, sans-serif;
+}
+        .Copyright small {
+	font-size: 10px;
+}
 				
 				/* Shameel's Descriptions */
-		/* I write beautiful code...sometimes it even compiles. */
-		/* A developer with a keen interest in networking and web development. */
-		/* I'm just another Robot with a keen interest in networking and web development. */
-		/* Have a strong interest in API, networking, and web development. */
-		/* Computer Science Student At <a. href="https://www.cardiffmet.ac.uk" target="_blank">Cardiff Metropolitan University</.a>. */
+		/* I write terrible code...sometimes it even compiles. */
 			}
 		</style>
 		<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -105,16 +115,14 @@
 		</div>
 		<div id="container">
 			<h1>Hi, I'm Shameel Fazul.</h1>
-			<a href="https://shameel-fazul.github.io" target="_blank">Computer Science Student</a>.</p>
+			<a href="https://shameel-fazul.github.io" target="_blank">Software Developer</a></p>
 			<p>I write terrible code...sometimes it even compiles</p> 
 			<br />
 			<div id="social-bar">
-				Contact Me:
 				<a class="c64-lightred-hover" href="https://mail.google.com/mail/u/0/#compose" friendly-icons-text="shameel.fazul@mail.com"><i class="fa fa-envelope-square"></i> <span reset-text="Email">Email</span></a><span class="divider"></span><a class="c64-lightgreen-hover" href="https://github.com/Shameel-Fazul" friendly-icons-text="github.com/Shameel-Fazul" target="_blank"><i class="fa fa-github-square"></i> <span reset-text="Github">Github</span></a><span class="divider"></span><a class="c64-cyan-hover" href="https://linkedin.comr" friendly-icons-text="Shameel Fazul" target="_blank"><i class="fa fa-linkedin-square"></i> <span reset-text="LinkedIn">LinkedIn</span></a>	
 			</div>
 		</div>
 		<div id="friendly-icons-target"></div>
-		<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>!function(e,t,r,a,n,c,l,o){function h(e,t,r,a){for(r='',a='0x'+e.substr(t,2)|0,t+=2;t<e.length;t+=2)r+=String.fromCharCode('0x'+e.substr(t,2)^a); return r}try{for(n=e.getElementsByTagName('a'),l='/cdn-cgi/l/email-protection#',o=l.length,a=0;a<n.length;a++)try{c=n[a],t=c.href.indexOf(l),t>-1&&(c.href='mailto:'+h(c.href,t+o))}catch(f){}for(n=Array.prototype.slice.apply(e.getElementsByClassName('__cf_email__')),a=0;a<n.length;a++)try{c=n[a],c.parentNode.replaceChild(e.createTextNode(h(c.getAttribute('data-cfemail'),0)),c)}catch(f){}}catch(f){}}(document)</script>
 		<script type="text/javascript">
 			var elements = document.getElementsByTagName('*');
 			var container = document.getElementById('friendly-icons-target');
@@ -135,6 +143,47 @@
 					}(element));
 				}
 			}
+						
 		</script>
+		
+		<footer class="Copyright"><small> Copyright &copy; 2020, Shameel Fazul - All Rights Reserved</small></footer>
+		<script language=javascript>
+    var title = new MovingTitle("Shameel Fazul           ", 100, 15);
+    title.init();
+	
+	function MovingTitle(writeText, interval, visibleLetters) {
+    var _instance = {};
+
+    var _currId = 0;
+    var _numberOfLetters = writeText.length;
+
+    function updateTitle() {
+        _currId += 1;
+        if(_currId > _numberOfLetters - 1) {
+            _currId = 0; 
+        }
+
+        var startId = _currId;
+        var endId = startId + visibleLetters;
+        var finalText;
+        if(endId < _numberOfLetters - 1) {
+            finalText = writeText.substring(startId, endId);
+        } else {
+            var cappedEndId = _numberOfLetters;
+            endId = endId - cappedEndId;
+
+            finalText = writeText.substring(startId, cappedEndId) +     writeText.substring(0, endId);
+        }
+
+        document.title = finalText; 
+    }
+
+    _instance.init = function() {
+        setInterval(updateTitle, interval);
+    };
+
+    return _instance;
+}
+</script>
 	</body>
 </html>
